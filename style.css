@@ -1,0 +1,160 @@
+body,
+ul,
+h1 {
+    margin: 0;
+    font-family: Verdana;
+}
+
+:root {
+    --Primary-color: #fff;
+    --secondary-color: #f76c6c;
+    --size15: 15px;
+    --element-center: center
+}
+
+body {
+    font-size: 100%;
+    background-color: #dedede
+}
+
+nav {
+    background-color: var(--secondary-color);
+    color: var(--Primary-color);
+    display: flex;
+    align-items: var(--element-center);
+    justify-content: space-between
+}
+
+ul {
+    padding: var(--size15)
+}
+
+div {
+    padding: 15px;
+    font-size: 1em;
+    font-weight: bold;
+
+}
+
+li {
+    list-style: none;
+    padding: 5px
+}
+
+header {
+    height: 150px;
+    background: url("etang-340.jpg") bottom no-repeat ;
+    display: flex;
+    align-items: var(--element-center);
+    justify-content: var(--element-center)
+}
+
+header h1 {
+    font-size: 1.1rem;
+    color: var(--Primary-color);
+    text-shadow: -3px 3px 4px #444444;
+}
+
+
+p{    margin: var(--size15) 10px;font-size: 0.6 rem;}
+section h2{
+    margin: 15px 10px;
+    grid-area: title;
+}
+#gridBlock {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-areas:
+        "title title title title"
+        "element1 element1 element1 element1"
+        "element2 element2 element3 element3"
+        "element4 element4 element5 element5"
+    ;
+    padding: 0.5em;
+}
+
+article {
+    display:flex;
+    align-items: center;
+    
+    border-radius: 5px;
+    background-color: var(--Primary-color);
+    box-shadow: -5px 6px 15px 2px rgba(130, 130, 130, 0.50);
+}
+
+article h1 {
+    color: var(--secondary-color);
+    margin-left: 10px;
+    font-size: 0.9rem;
+}
+
+.element1 {
+    grid-area: element1;
+}
+
+.element2 {
+    grid-area: element2;
+}
+
+.element3 {
+    grid-area: element3;
+}
+
+.element4 {
+    grid-area: element4;
+}
+
+.element5 {
+    grid-area: element5;
+}
+
+footer{background-color: var(--secondary-color);margin-top: 20px;padding : 10px;color:black;font-size: 0.9rem;}
+
+@media screen and (min-width:412px) and (max-width:768px){
+   body{
+    font-size: 110%;
+   }
+   li {
+   display:inline-block;
+}
+header h1 {
+    font-size: 1.5rem;
+}
+   header {
+        height: 200px;
+        background: url("etang-780.jpg") bottom no-repeat;
+    }
+    section{width:80%; margin:auto}
+}
+
+@media screen and (min-width:769px) {
+    body{
+     font-size: 110%;
+    }
+    li {
+    display:inline-block;
+ }
+ header h1 {
+     font-size: 2rem;
+ }
+    header {
+         height: 400px;
+         background: url("etang.jpg") bottom no-repeat;
+     }
+     section{width:70%; margin:auto}
+     #gridBlock {
+        display: grid;
+        grid-gap: 20px;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        grid-template-areas:
+            "title title title title"
+            "element1 element1 element2 element3"
+            "element1 element1 element4 element5"
+            
+                    ;
+        padding: 0.5em;
+    }
+ }
